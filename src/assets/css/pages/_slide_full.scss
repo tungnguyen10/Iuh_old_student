@@ -1,0 +1,87 @@
+.swiper_slidefull {
+  height: 50vw;
+
+  @include media(pc) {
+    height: 40vw;
+  }
+
+  .swiper-slide {
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.l-mv {
+  &__cont {
+    position: relative;
+
+    &::before {
+      content: '';
+      background: url(../images/top/mv-deco.png) repeat-x bottom center;
+      background-size: contain;
+      height: px-rem(165);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .btn-play {
+      width: px-rem(120);
+      height: px-rem(120);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      @include media(sp) {
+        width: px-rem(40);
+        height: px-rem(40);
+      }
+    }
+
+    &--ttl {
+      position: absolute;
+      bottom: px-rem(17);
+      max-width: px-rem(1040);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      width: 70%;
+
+      @include media(sp) {
+        bottom: px-rem(5);
+        width: 85%;
+        max-width: inherit;
+      }
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+      width: px-rem(60);
+      height: px-rem(60);
+      background: #ffffff8a;
+      border-radius: 50%;
+      @include media(sp) {
+        width: px-rem(30);
+        height: px-rem(30);
+      }
+      &::after{
+        font-size: px-rem(25);
+        @include media(sp) {
+          font-size: px-rem(14);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+

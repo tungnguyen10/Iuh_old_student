@@ -1,0 +1,7 @@
+.box-list-profile {
+  margin: px-rem(100) 0;
+
+  @include media(sp) {
+    margin: px-rem(60) 0;
+  }
+}
