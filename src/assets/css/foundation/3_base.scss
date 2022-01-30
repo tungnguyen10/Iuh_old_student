@@ -90,10 +90,10 @@ a {
 
 select,
 textarea,
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
+// input[type="text"],
+// input[type="email"],
+// input[type="number"],
+// input[type="tel"],
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,18 +118,18 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  width: 100%;
-  border: 1px solid $color-sub;
-  background: #fff;
-  padding: 0 15px;
-  box-sizing: border-box;
-  height: 44px;
-  line-height: 44px;
-  font-size: 1.6rem;
-}
+// input[type="text"],
+// input[type="email"],
+// input[type="tel"] {
+//   width: 100%;
+//   border: 1px solid $color-sub;
+//   background: #fff;
+//   padding: 0 15px;
+//   box-sizing: border-box;
+//   height: 44px;
+//   line-height: 44px;
+//   font-size: 1.6rem;
+// }
 
 select {
   cursor: pointer;
@@ -230,54 +230,3 @@ body.modal--open {
   }
 }
 
-.btn {
-  position: relative;
-  width: px-rem(200);
-  height: px-rem(40);
-  text-align: center;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  transition: all .3s ease;
-  margin-top: px-rem(15);
-  @include media(sp){
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &.rotate-button {
-    display: block;
-
-    .rotate-button-face,
-    .rotate-button-face-back {
-      position: absolute;
-      display: block;
-      border: 1px solid $color-main;
-      transition: all .5s;
-      color: $color-main;
-      text-decoration: none;
-      width: px-rem(200);
-      height: px-rem(40);
-      line-height: px-rem(40);
-      border-radius: 4px;
-      text-transform: uppercase;
-      font-weight: 500;
-      top: 0;
-    }
-
-    .rotate-button-face {
-      background-color: #fff;
-      transform: translateZ(15px);
-    }
-
-    .rotate-button-face-back {
-      background: linear-gradient(90deg, #fd0001 0%, #991a4d 50%, #353398 100%);
-      color: $color-base;
-      border: 0px;
-      transform: rotateX(-90deg) translateZ(15px);
-    }
-
-    &:hover {
-      transform: rotateX(90deg);
-    }
-  }
-}
