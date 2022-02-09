@@ -76,6 +76,8 @@
         .alumniProfile-img {
           width: px-rem(150);
           height: px-rem(150);
+          border-radius: 50%;
+          overflow: hidden;
 
           @include media(sp) {
             width: px-rem(100);
