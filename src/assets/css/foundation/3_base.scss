@@ -200,8 +200,10 @@ body.modal--open {
   }
   &_content{
     font-size: px-rem(28);
+    margin-bottom: px-rem(30);
     @include media(sp) {
       font-size: px-rem(22);
+      margin-bottom: px-rem(20);
     }
   }
   &__small {

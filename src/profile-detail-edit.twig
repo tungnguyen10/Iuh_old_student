@@ -7,7 +7,7 @@
     <div class="profile-detaill__information">
       <div class="profile-detaill__photo">
         <div>
-          <img src="assets/images/profile/profile.jpg" alt="profile">
+          <p><img src="assets/images/profile/profile.jpg" alt="profile"></p>
           <ul class="icon-sns">
             <li><a class="i-fb" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
             <li><a class="i-ins" href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -58,11 +58,15 @@
 
     </div>
     <div class="profile-detaill__experience">
+     {# <p class="btn btn__fourth btn_add__experience edit-profile" data-profile="add-experience"> <i class="fa-solid fa-circle-plus"></i>Thêm</p> #}
       <div class="tabs js-slidetabs">
-        <div class="tab-link current">
+        {# <div class="tab-link current">
           <p>2021</p>
+        </div> #}
+        <div class="tab-link current">
+          <p class="profile-detaill__experience__add_new edit-profile" data-profile="add-experience"><i class="fa-solid fa-circle-plus"></i>THÊM</p>
         </div>
-        <div class="tab-link">
+        {# <div class="tab-link">
           <p>2022</p>
         </div>
         <div class="tab-link">
@@ -70,7 +74,7 @@
         </div>
         <div class="tab-link">
           <p>2024</p>
-        </div>
+        </div> #}
       </div>
 
 
@@ -79,8 +83,6 @@
           <div class="arrow-icon arrow--prev03"><i class="fas fa-angle-left"></i></div>
           <div class="arrow-icon arrow--next03"><i class="fas fa-angle-right"></i></div>
         </div>
-        <p class="btn btn__fourth btn_add__experience edit-profile" data-profile="add-experience"><i
-            class="fas fa-plus-circle"></i></p>
         <div class="dots-profile"></div>
         <div class="js-slidetabs-for">
           <div class="tab-content">
@@ -118,7 +120,7 @@
               <a class="btn btn__first profile-close">Xoá</a>
             </p>
           </div>
-          <div class="tab-content">
+         {#  <div class="tab-content">
             <h2 class="element-title">quá trình công tác</h2>
             <div class="resume-content">
               <h6 class="uppercase"><span>Front-end Developer - </span>Vien
@@ -188,7 +190,7 @@
               <a class="btn btn__first edit-profile" data-profile="experience-2024">Cập nhật</a>
               <a class="btn btn__first">Xoá</a>
             </p>
-          </div>
+          </div> #}
         </div>
       </div>
     </div>
@@ -212,6 +214,7 @@
           </div>
           <div class="profile-detaill__inforShow">
             <h2 class="element-title">Thông tin sinh viên </h2>
+
             <dl>
               <dt>Họ tên:</dt>
               <dd class="edit-profile-information-detail">
@@ -285,6 +288,12 @@
                 </fieldset>
               </dd>
             </dl>
+            <dl>
+              <dt>Cập nhật ảnh:</dt>
+              <dd class="edit-profile-information-detail is-active">
+                  <input type="file" accept="image/*,.pdf" name="edit_ttcn_photo" id="edit_ttcn_photo">
+              </dd>
+            </dl>
             <p class="btn-save-cancel">
               <a class="btn btn__first">Lưu</a>
               <a class="profile-close btn btn__first">Huỷ bỏ</a>
@@ -317,11 +326,11 @@
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày bắt đầu:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày kết thúc:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <label>Mô tả:</label>
@@ -362,11 +371,11 @@
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày bắt đầu:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày kết thúc:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <label>Mô tả:</label>
@@ -407,11 +416,11 @@
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày bắt đầu:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày kết thúc:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <label>Mô tả:</label>
@@ -452,11 +461,11 @@
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày bắt đầu:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày kết thúc:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <label>Mô tả:</label>
@@ -497,11 +506,11 @@
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày bắt đầu:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Ngày kết thúc:</label>
-                  <input class="form-control" type="date">
+                  <input class="form-control" type="month">
                 </fieldset>
                 <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <label>Mô tả:</label>

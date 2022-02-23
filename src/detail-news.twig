@@ -5,7 +5,9 @@
 
 	<div class="iuh-content-page">
 		<div class="container">
-			<h1 class="element-title element-title_content">
+      <div class="row">
+        <div class="col-9">
+        	<h1 class="element-title element-title_content">
 				Tầm nhìn - Sứ mạng - Mục tiêu chiến lược
 			</h1>
 			<div class="divNewsDetail">
@@ -46,7 +48,16 @@
 					</p>
 				</div>
 			</div>
+        </div>
+        <div class="col-3">
+          {% include './_templates/components/_NewsHighline.twig' %}
+        </div>
+      </div>
+		
 		</div>
 	</div>
 
+  {% include './_templates/components/_NewsInvolve.twig' %}
+  
+  
 {% endblock %}

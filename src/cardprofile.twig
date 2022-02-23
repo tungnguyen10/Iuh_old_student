@@ -5,6 +5,22 @@
 
 <div class="box-list-profile">
   <div class="container">
+    <div class="box-list-profile__search-select">
+      <form action="/search" method="get">
+        <select class="box-list-profile__select">
+          <option>Choose me 1</option>
+          <option>Choose me 2</option>
+          <option>Choose me 3</option>
+        </select>
+        <div class="box-list-profile__search-container">
+          <input class="box-list-profile__search box-list-profile__expandright" id="searchright" type="search" name="q"
+            placeholder="Search">
+          <label class="box-list-profile__button box-list-profile__searchbutton" for="searchright">
+            <span class="box-list-profile__mglass">&#9906;</span>
+          </label>
+        </div>
+      </form>
+    </div>
     <div class="row">
       <div class="col-12 col-md-4 col-lg-3">
         <div class="card-profile">

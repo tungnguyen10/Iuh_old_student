@@ -52,7 +52,7 @@ export default class ProfileTab extends BaseModule {
       $("#" + Tabid).addClass('is-opened');
       // $("#" + Tabid).find('.btn_add').addClass('aaa')
       $("#" + Tabid).find('.btn_add').on('click', function () {
-        $("#" + Tabid).find('.process_experience').append('<div class="row group_contact"><fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label>Vị trí công việc:</label><input class="form-control" type="text"></fieldset><fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><label>Ngày bắt đầu:</label><input class="form-control" type="date"></fieldset><fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><label>Ngày kết thúc:</label><input class="form-control" type="date"></fieldset><fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label>Mô tả:</label><textarea class="form-control content-area" rows="5"></textarea></textarea></fieldset> </div>');
+        $("#" + Tabid).find('.process_experience').append('<div class="row group_contact"><fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label>Vị trí công việc:</label><input class="form-control" type="text"></fieldset><fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><label>Ngày bắt đầu:</label><input class="form-control" type="month"></fieldset><fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><label>Ngày kết thúc:</label><input class="form-control" type="month"></fieldset><fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label>Mô tả:</label><textarea class="form-control content-area" rows="5"></textarea></textarea></fieldset> </div>');
       });
       $("#" + Tabid).find('.btn_remove').on('click', function () {
         $("#" + Tabid).find('.group_contact:last').remove();
@@ -65,10 +65,10 @@ export default class ProfileTab extends BaseModule {
       $('.edit-profile').removeClass('is-opened');
       $('.profile-content').removeClass('is-opened');
     })
-    $('.edit-profile-information-detail').on('click', function () {
-      $(this).addClass('is-active').children('fieldset').stop().slideDown(300);
-      return false;
-    });
+    // $('.edit-profile-information-detail').on('click', function () {
+    //   $(this).addClass('is-active').children('fieldset').stop().slideDown(300);
+    //   return false;
+    // });
 
 
   }
