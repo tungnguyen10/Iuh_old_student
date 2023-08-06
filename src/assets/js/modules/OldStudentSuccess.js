@@ -32,6 +32,7 @@ export default class OldStudentSuccess extends BaseModule {
         }
       ]
     });
+    
   }
 
 

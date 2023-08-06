@@ -56,6 +56,7 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "babel-polyfill": "^6.26.0",
     "jquery": "^3.6.0",
+    "js-datepicker": "^5.18.0",
     "normalize-css": "^2.3.1",
     "slick-carousel": "^1.8.1",
     "swipejs": "^2.3.1",

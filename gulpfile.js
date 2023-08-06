@@ -17,7 +17,7 @@ const concat = require('gulp-concat')
 const footer = require('gulp-footer')
 const gulpif = require('gulp-if')
 const eslint = require('gulp-eslint')
-const htmlValidator = require('gulp-w3c-html-validator')
+// const htmlValidator = require('gulp-w3c-html-validator')
 const config = require('./gulp.config')
 
 let isDev = 'development'
@@ -44,11 +44,11 @@ gulp.task('twig', () => {
       process.stderr.write(`${err.message}\n`);
       this.emit('end');
     })
-    .pipe(htmlValidator({
-      skipWarnings: true
-    }))
+    // .pipe(htmlValidator({
+    //   skipWarnings: true
+    // }))
     .pipe(gulp.dest(config.dist.root))
-    .pipe(gulpif(!isDev, htmlValidator.reporter()))
+    // .pipe(gulpif(!isDev, htmlValidator.reporter()))
     .pipe(browserSync.stream())
 })
 

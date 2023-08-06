@@ -14,7 +14,7 @@
       margin-bottom: px-rem(20);
     }
 
-    
+
   }
 
   &__list {
@@ -23,7 +23,8 @@
     @media screen and (max-width: 1200px) {
       margin: 0 px-rem(20);
     }
-    .slick-slide{
+
+    .slick-slide {
       width: px-rem(370);
       margin: 0 px-rem(15);
       position: relative;
@@ -69,8 +70,9 @@
         }
       }
     }
+
     .successful-box {
-   
+
 
       .successful-img {
         padding: px-rem(30) 0 px-rem(15);
@@ -80,11 +82,43 @@
           padding-right: px-rem(55);
         }
 
-        img {
-          border-radius: px-rem(8);
-          overflow: hidden;
+        p {
+          position: relative;
           width: 100%;
-          height: auto;
+          padding-top: 120%;
+          height: 0;
+          overflow: hidden;
+          border-radius: px-rem(8);
+          // background: #fd0001;
+          // background: linear-gradient(90deg, #fd0001 0%, #991a4d 50%, #353398 100%);
+          background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+          background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+          background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+          background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+          background-size: 3px 3px;
+          &::before{
+            content: '';
+            background: linear-gradient(141deg, #fc3400 0%, #7d1fdb87 51%, #363397 75%);
+            opacity: 0.85;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+          }
+        }
+
+        img {
+          object-fit: cover;
+          width: 85%;
+          height: 85%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 4rem;
+
         }
       }
 
@@ -133,7 +167,7 @@
           }
 
           i {
-            font-size: px-rem(25);
+            font-size: px-rem(35);
             color: #333399;
           }
         }

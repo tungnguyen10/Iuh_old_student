@@ -5,9 +5,20 @@
   -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: px-rem(30);
-
+  .card_news_time{
+    z-index: 12;
+    position: absolute;
+    color: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.2rem 2rem;
+  }
   &:hover {
     .card_news_image {
+      .card_news_time{
+        z-index: 1;
+      }
       .postTwoGradient {
         height: 100%;
         background: linear-gradient(00deg, #fd0001 0%, #991a4d 50%, #353398 100%);
@@ -28,24 +39,7 @@
     padding-top: 62.5%;
     position: relative;
 
-    h4 {
-      position: absolute;
-      bottom: 3%;
-      left: 0;
-      right: 0;
-      color: #fff;
-      line-height: 1.1;
-      z-index: 12;
-      font-weight: 800;
-      font-size: px-rem(30);
-      margin: px-rem(15) 0;
-      width: 100%;
-      padding: 0 px-rem(20);
-
-      @include media(sp) {
-        font-size: px-rem(24);
-      }
-    }
+ 
 
     img {
       position: absolute;
@@ -81,10 +75,17 @@
 
   .card_news_content {
     position: relative;
-    padding: px-rem(20) px-rem(20);
+    padding: px-rem(20) px-rem(20) px-rem(30);
     background: #fff;
     font-size: px-rem(16);
-    ;
+    h4 {
+      line-height: 1.1;
+      z-index: 12;
+      font-weight: 800;
+      font-size: px-rem(22);
+      margin: px-rem(10) 0 px-rem(15);
+      width: 100%;
+    }
 
     .card_news_content__button {
       position: absolute;

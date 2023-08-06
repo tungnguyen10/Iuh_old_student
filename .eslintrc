@@ -6,7 +6,7 @@
       "jsx": true,
       "experimentalObjectRestSpread": true
     }
-  }, 
+  },
   "parser": "babel-eslint",
   "env": {
     "browser": true,

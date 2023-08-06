@@ -8,13 +8,22 @@ export default class EventSlick extends BaseModule {
       infinite: true,
       autoplay: false,
       autoplaySpeed: 2000,
-      centerMode: false,
-      variableWidth: true,
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
       prevArrow: $(".arrow-icon.arrow--prev"),
       nextArrow: $(".arrow-icon.arrow--next"),
     });
+    // $('.js-slider').slick({
+    //   infinite: true,
+    //   autoplay: false,
+    //   autoplaySpeed: 2000,
+    //   centerMode: false,
+    //   variableWidth: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   prevArrow: $(".arrow-icon.arrow--prev"),
+    //   nextArrow: $(".arrow-icon.arrow--next"),
+    // });
     $('.js-slider02').slick({
       infinite: true,
       autoplay: false,

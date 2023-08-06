@@ -1,3 +1,6 @@
+.align-items-center{
+  align-items: center;
+}
 .card-profile {
   background: #fff;
   margin-right: px-rem(30);
@@ -39,14 +42,13 @@
   .card-profile-img {
     width: px-rem(200);
     height: px-rem(200);
-    border-radius: 50%;
+    // border-radius: 50%;
     margin: 0 auto px-rem(25);
-
-    @include media(sp) {
-      img {
-        width: 100%;
-        height: auto;
-      }
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
   }
 

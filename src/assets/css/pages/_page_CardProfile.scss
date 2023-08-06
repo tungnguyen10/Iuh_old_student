@@ -1,6 +1,6 @@
 .box-list-profile {
   margin: px-rem(100) 0;
-
+ 
   @include media(sp) {
     margin: px-rem(60) 0;
   }
@@ -42,8 +42,9 @@
   form {
     display: flex;
     justify-content: flex-end;
+    gap: px-rem(15);
   }
-
+  
   &__search-select {
     position: relative;
     display: block;
@@ -54,7 +55,7 @@
   &__search-container {
     position: relative;
     display: inline-block;
-    margin: 0 px-rem(10);
+    margin: 0 px-rem(0);
     height: 50px;
     width: 50px;
     vertical-align: bottom;
@@ -125,14 +126,25 @@
 
     padding: 0 0 0 16px;
   }
-
+  .box-list-profile__input_search{
+    padding: 0 40px 0 15px;
+    border: 1px solid #8d99ac;
+    width: 30%;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    border-radius: 0%;
+  }
   &__select {
     display: inline-block;
-    max-width: px-rem(300);
+    width: px-rem(300);
     height: 50px;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z'/%3E%3C/svg%3E") no-repeat;
     background-position: 95% center;
     background-size: 5%;
     flex: 1;
   }
+}
+
+.qs-datepicker-container {
+  font-size: 1.5rem;
 }

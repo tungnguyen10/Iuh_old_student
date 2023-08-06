@@ -195,7 +195,7 @@
       box-sizing: border-box;
 
       @include media(sp) {
-        width: inherit;
+        width: 70%;
         margin: 0 auto;
         padding: px-rem(10) px-rem(10) px-rem(10);
       }
