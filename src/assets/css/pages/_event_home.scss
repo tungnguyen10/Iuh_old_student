@@ -313,37 +313,7 @@
       }
     }
 
-    .event-link {
-      font-weight: 500;
-      position: relative;
-      margin-left: px-rem(15);
-      letter-spacing: 0.001em;
-
-      @include media(sp) {
-        font-size: px-rem(14);
-      }
-
-      @include media(pcOnly) {
-        &:hover {
-          &::before {
-            right: px-rem(-30);
-          }
-        }
-      }
-
-      &::before {
-        background: url(../images/top/icon-arrow.png) no-repeat;
-        background-size: contain;
-        width: px-rem(16);
-        height: px-rem(13);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: px-rem(-20);
-        transition: all 0.3s ease;
-        content: '';
-      }
-    }
+    
   }
 
 }

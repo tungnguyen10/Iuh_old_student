@@ -107,9 +107,67 @@
       background-position: 0;
     }
   }
+}
 
+.btn-view{
+  display: block;
+  position: relative;
+  color: white;
+  font-size: px-rem(22px);
+  background: #333395; 
+  background: linear-gradient(to right, #333395 0%,#ff0000 100%);
+  padding: px-rem(8px) px-rem(20px);
+  border-radius: px-rem(30px);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    background: radial-gradient(circle, #333395, #891593, #c80078, #f1004c, #ff0000) !important;
+  }
+}
+.btn-bar{
+  position: relative;
+  width: px-rem(50px);
+  height: px-rem(50px);
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid $color-link;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  i{
+    font-size: px-rem(22px);
+  }
+  
+}
+.event-link {
+  font-weight: 500;
+  position: relative;
+  letter-spacing: 0.001em;
 
+  @include media(sp) {
+    font-size: px-rem(14);
+  }
 
+  @include media(pcOnly) {
+    &:hover {
+      &::before {
+        right: px-rem(-30);
+      }
+    }
+  }
 
-
+  &::before {
+    background: url(../images/top/icon-arrow.png) no-repeat;
+    background-size: contain;
+    width: px-rem(16);
+    height: px-rem(13);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: px-rem(-20);
+    transition: all 0.3s ease;
+    content: '';
+  }
 }

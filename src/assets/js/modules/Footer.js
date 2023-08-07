@@ -4,7 +4,6 @@ import $ from "jquery";
 
 export default class Footer extends BaseModule {
   register() {
-    console.log(this)
     this.accordion()
   }
   accordion() {
@@ -15,7 +14,14 @@ export default class Footer extends BaseModule {
           return false;
         });
       } 
+      $("a.btn-support").on('click', function (e) {
+        e.stopPropagation();
+        $(".support-content").slideToggle();
+      });
     });
   }
+  
+  
+  
 
 }

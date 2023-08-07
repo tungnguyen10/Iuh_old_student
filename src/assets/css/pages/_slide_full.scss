@@ -2,7 +2,7 @@
   height: 50vw;
 
   @include media(pc) {
-    height: 40vw;
+    height: 35vw;
   }
 
   .swiper-slide {
@@ -14,11 +14,19 @@
   }
 }
 .l-mv {
+  // financial
+  &.financial-mv {
+    .l-mv__cont {
+      &::before {
+        display: none;
+      }
+    }
+  }
   &__cont {
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       background: url(../images/top/mv-deco.png) repeat-x bottom center;
       background-size: contain;
       height: px-rem(165);
@@ -65,7 +73,8 @@
       }
     }
 
-    .swiper-button-next, .swiper-button-prev{
+    .swiper-button-next,
+    .swiper-button-prev {
       width: px-rem(60);
       height: px-rem(60);
       background: #ffffff8a;
@@ -74,7 +83,7 @@
         width: px-rem(30);
         height: px-rem(30);
       }
-      &::after{
+      &::after {
         font-size: px-rem(25);
         @include media(sp) {
           font-size: px-rem(14);

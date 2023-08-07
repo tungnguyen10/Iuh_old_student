@@ -11,12 +11,13 @@ $color-main: #333399;
 $color-sub: #8d99ac;
 $color-accent: #333;
 $color-caution: #e82b2b;
-$color-link: #333;
+$color-link: #666;
 $color-placeholder: #999;
 $color-black: #21344a;
 $color-gray: #e0e0e0;
+$keycolor: #39B54A;
 
-$font-size-base: 10px;
+$font-size-base: 10;
 $font-size-xxs: 10px;
 $font-size-xs: 12px;
 $font-size-sm: 14px;
@@ -30,7 +31,7 @@ $font-josefin: 'Josefin Sans', sans-serif;
 
 $width-base-sp: 375;
 $width-base-tb: 1000;
-$width-base-pc: 1280px;
+$width-base-pc: 1280;
 $contents-max-pc: 1920px;
 $contents-min-pc: 1000px;
 $contents-max_rem-pc: 192rem;

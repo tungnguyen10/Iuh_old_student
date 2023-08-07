@@ -33,7 +33,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser-js": "^5.2.2",
@@ -53,13 +53,15 @@
     "webpack-stream": "^6.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "babel-polyfill": "^6.26.0",
-    "jquery": "^3.6.0",
-    "js-datepicker": "^5.18.0",
+    "gsap": "^3.7.1",
+    "jquery": "^3.6.1",
+    "js-datepicker": "^5.18.2",
     "normalize-css": "^2.3.1",
+    "perfect-scrollbar": "^1.5.2",
+    "raw-loader": "^4.0.2",
     "slick-carousel": "^1.8.1",
-    "swipejs": "^2.3.1",
-    "swiper": "^7.4.1"
+    "swiper": "^7.0.1",
+    "wowjs": "^1.1.3"
   }
 }

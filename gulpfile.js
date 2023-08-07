@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const twig = require('gulp-twig')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 const sassGlob = require('gulp-sass-glob')
 const plumber = require('gulp-plumber')
 const imagemin = require('gulp-imagemin')
@@ -54,7 +54,8 @@ gulp.task('twig', () => {
 
 gulp.task('css', () => gulp.src([`${config.src.assets}/css/*.scss`])
   .pipe(sassGlob())
-  .pipe(sass({ outputStyle: isDev ? 'nested' : 'compressed' }).on('error', sass.logError))
+  // .pipe(sass({ outputStyle: isDev ? 'nested' : 'compressed' }).on('error', sass.logError))
+  .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
   .pipe(gulpif(!isDev, footer(`\n/* ${now} */\n/* v${require('./package.json').version} */`)))
   .pipe(gulp.dest(`${config.dist.assets}/css`))
   .pipe(browserSync.stream()))

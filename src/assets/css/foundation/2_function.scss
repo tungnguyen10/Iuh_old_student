@@ -1,17 +1,17 @@
 // ===== Size ===== //
 @function px-vw($size, $stage, $digits: 3) {
-	@return decimal-round($size / $stage * 100, $digits) * 1vw;
+	@return decimal-round(calc($size / $stage) * 100, $digits) * 1vw;
 }
 
 @function px-per($size, $stage, $digits: 3) {
-	@return decimal-round($size / $stage * 100, $digits) * 1%;
+	@return decimal-round(calc($size / $stage) * 100, $digits) * 1%;
 }
 
 @function px-rem($size, $digits: 3) {
 	@if $size == 0 {
 		@return $size;
 	} @else {
-		@return decimal-round($size / $font-size-base, $digits, floor) * 1rem;
+		@return decimal-round(calc($size / $font-size-base), $digits, floor) * 1rem;
 	}
 }
 
@@ -22,7 +22,7 @@
 
 @function strip-unit($number) {
 	@if type-of($number) == 'number' and not unitless($number) {
-		@return $number / ($number * 0 + 1);
+		@return calc($number / ($number * 0 + 1px));
 	}
 	@return $number;
 }
@@ -50,11 +50,11 @@
 	}
 
 	@if $mode == round {
-		@return round($num * $n) / $n;
+		@return calc(round($num * $n) / $n);
 	} @else if $mode == ceil {
 		@return ceil($num * $n) / $n;
 	} @else if $mode == floor {
-		@return floor($num * $n) / $n;
+		@return calc(floor($num * $n) / $n);
 	} @else {
 		@warn '#{$mode} is undefined keyword.';
 		@return $num;
