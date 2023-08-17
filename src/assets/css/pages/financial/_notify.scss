@@ -4,7 +4,9 @@
   color: $color-base;
   .l-financial-notifyBtn{
     margin-top: px-rem(40px);
-    max-width: 250px;
+    @include media(pc) {
+      max-width: 250px;
+    }
     a{
       border: 1px solid white;
       background: transparent;

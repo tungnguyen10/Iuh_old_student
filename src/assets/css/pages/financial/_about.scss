@@ -3,8 +3,10 @@
   margin-top: px-rem(50px);
   padding-bottom: px-rem(150px);
   background: url("../images/financial/bg-deco.jpg") no-repeat center bottom/ 100%;
+  margin-bottom: px-rem(-80px);
   @include media(sp) {
     margin-top: 10%;
+    margin-bottom: px-rem(-80px);
   }
   .l-inner{
     display: flex;

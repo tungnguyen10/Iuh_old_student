@@ -61,7 +61,7 @@
     "perfect-scrollbar": "^1.5.2",
     "raw-loader": "^4.0.2",
     "slick-carousel": "^1.8.1",
-    "swiper": "^7.0.1",
+    "swiper": "^7.4.1",
     "wowjs": "^1.1.3"
   }
 }

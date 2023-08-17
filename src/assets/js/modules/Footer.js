@@ -1,27 +1,25 @@
-
-import BaseModule from "./BaseModule"
+import BaseModule from "./BaseModule";
 import $ from "jquery";
 
 export default class Footer extends BaseModule {
   register() {
-    this.accordion()
+    this.accordion();
   }
   accordion() {
-    $(window).bind("load resize", function () {
+    $(window).on("load resize", function () {
       if ($(window).width() < 767) {
-        $('.f-title').on('click', function () {
-          $(this).toggleClass('is-active').next().stop().slideToggle(300);
+        $(".f-title").on("click", function () {
+          $(this).toggleClass("is-active").next().stop().slideToggle(300);
           return false;
         });
-      } 
-      $("a.btn-support").on('click', function (e) {
-        e.stopPropagation();
-        $(".support-content").slideToggle();
-      });
+        $(".l-header-nav__item p").on("click", function () {
+          $(this).parent().toggleClass("is-active");
+        });
+      }
+    });
+    $("a.btn-support").on("click", function (e) {
+      e.stopPropagation();
+      $(".support-content").slideToggle();
     });
   }
-  
-  
-  
-
 }

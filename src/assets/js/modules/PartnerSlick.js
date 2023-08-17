@@ -6,7 +6,7 @@ export default class PartnerSlick extends BaseModule {
   register() {
     $('.js-slider04').slick({
       infinite: true,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
       centerMode: false,
       variableWidth: true,
@@ -19,7 +19,7 @@ export default class PartnerSlick extends BaseModule {
           settings: 'unslick',
         },
         {
-          breakpoint: 480,
+          breakpoint: 767,
           settings: {
             centerMode: true,
             slidesToShow: 1,

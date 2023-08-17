@@ -1,44 +1,206 @@
-import BaseModule from "./BaseModule"
+import BaseModule from "./BaseModule";
 // core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination, Autoplay , EffectFade} from 'swiper';
+import Swiper, {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCreative,
+  EffectFade,
+} from "swiper";
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default class SwiperFull extends BaseModule {
   register() {
-    Swiper.use([Navigation, Pagination, Autoplay, EffectFade])
-    this.swiper = new Swiper('.swiper_slidefull', {
-      direction: 'horizontal',
+    Swiper.use([Navigation, Pagination, Autoplay, EffectCreative, EffectFade]);
+    this.swiper = new Swiper(".swiper_slidefull", {
+      direction: "horizontal",
       slidesPerView: 1,
       loop: true,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
+      // effect: "fade",
+      // fadeEffect: {
+      //   crossFade: true
+      // }, 
+      effect: "creative",
+      creativeEffect: {
+        limitProgress: 2, 
+        prev: {
+          opacity: 0.85,
+          scale: 0.8,
+          translate: ["-95%", 0, 0],
+        },
+        next: {
+          opacity: 0.85,
+          scale: 0.8,
+          translate: ["95%", 0, 0],
+        },
       },
-      // effect: 'coverflow',
-      // coverflowEffect: {
-      //   rotate: 30,
-      //   slideShadows: false,
-      // },
+      speed: 1000,
       autoplay: {
-        delay: 4000,
-        waitForTransition:false
+        delay: 3000,
       },
 
       pagination: {
-        // el: '.swiper-pagination',
-        // type: 'bullets',
-        clickable: true,
+        el: '.swiper-pagination',
+        type: 'bullets',
+        // clickable: true,
       },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
     });
-  }
-  
+    // this.swiper = new Swiper(".swiperSlidefullO1", {
+    //   slidesPerView: 1,
+    //   parallax: true,
+    //   loop: true,
+    //   // Responsive breakpoints
+    //   breakpoints: {
+    //     // when window width is >= 320px
+    //     320: {
+    //       speed: 900 /* Duration of transition between slides (in ms) */,
+    //       slidesPerView: 1.2,
+    //     },
+    //     // when window width is >= 640px
+    //     640: {
+    //       speed: 1400,
+    //     },
+    //   },
+    //   centeredSlides: true,
+    //   slideToClickedSlide: true,
+    //   spaceBetween: 0,
+    //   grabCursor: true,
+    //   effect: "creative",
+    //   creativeEffect: {
+    //     limitProgress: 2, 
+    //     prev: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["-95%", 0, 0],
+    //     },
+    //     next: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["95%", 0, 0],
+    //     },
+    //   },
 
+    //   // autoplay: {
+    //   //   delay: 4000,
+    //   //   waitForTransition: false,
+    //   // },
+
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    //     clickable: true,
+    //   },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    // });
+    // this.swiper = new Swiper(".swiperSlidefullO2", {
+    //   slidesPerView: 2,
+    //   parallax: true,
+    //   loop: true,
+    //   // Responsive breakpoints
+    //   breakpoints: {
+    //     // when window width is >= 320px
+    //     320: {
+    //       speed: 900 /* Duration of transition between slides (in ms) */,
+    //       slidesPerView: 1.2,
+    //     },
+    //     // when window width is >= 640px
+    //     640: {
+    //       speed: 1400,
+    //     },
+    //   },
+    //   centeredSlides: true,
+    //   slideToClickedSlide: true,
+    //   spaceBetween: 0,
+    //   grabCursor: true,
+    //   effect: "creative",
+    //   creativeEffect: {
+    //     limitProgress: 2, 
+    //     prev: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["-95%", 0, 0],
+    //     },
+    //     next: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["95%", 0, 0],
+    //     },
+    //   },
+
+    //   autoplay: {
+    //     delay: 4000,
+    //     waitForTransition: false,
+    //   },
+
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    //     clickable: true,
+    //   },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    // });
+    // this.swiper = new Swiper(".swiperSlidefullO3", {
+    //   slidesPerView: 3,
+    //   parallax: true,
+    //   loop: true,
+    //   // Responsive breakpoints
+    //   breakpoints: {
+    //     // when window width is >= 320px
+    //     320: {
+    //       speed: 900 /* Duration of transition between slides (in ms) */,
+    //       slidesPerView: 1.2,
+    //     },
+    //     // when window width is >= 640px
+    //     640: {
+    //       speed: 1400,
+    //     },
+    //   },
+    //   centeredSlides: true,
+    //   slideToClickedSlide: true,
+    //   spaceBetween: 0,
+    //   grabCursor: true,
+    //   effect: "creative",
+    //   creativeEffect: {
+    //     limitProgress: 2, 
+    //     prev: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["-95%", 0, 0],
+    //     },
+    //     next: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["95%", 0, 0],
+    //     },
+    //   },
+
+    //   autoplay: {
+    //     delay: 4000,
+    //     waitForTransition: false,
+    //   },
+
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    //     clickable: true,
+    //   },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    // });
+  }
 }

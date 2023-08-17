@@ -3,7 +3,7 @@
 	min-height: 500px;
 
   @include media(sp) {
-    margin: px-rem(60) 0;
+    margin: px-rem(60) 0 px-rem(40);
   }
 	ul{
 		list-style: disc;

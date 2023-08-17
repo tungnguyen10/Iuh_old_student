@@ -2,9 +2,6 @@
   position: relative;
   z-index: 9;
   text-transform: uppercase;
-  
-
-
   ul {
     margin: 0;
     padding: 0;
@@ -16,7 +13,6 @@
     @include media(pc) {
       padding-left: px-rem(192);
     }
-
     @include media(sp) {
       padding-left: px-rem(0);
       margin: px-rem(30) auto px-rem(5);
@@ -35,6 +31,10 @@
         line-height: px-rem(18);
         color: $color-main;
         font-weight: 900;
+        @include media(sp) {
+          font-size: px-rem(10);
+          line-height: px-rem(16);
+        }
       }
     }
 
@@ -47,7 +47,10 @@
       line-height: px-rem(18);
       color: #000;
       font-weight: 400;
-
+      @include media(sp) {
+        font-size: px-rem(10);
+        line-height: px-rem(16);
+      }
       &:hover {
         color: $color-main;
         font-weight: 550;

@@ -1,5 +1,10 @@
 // ===== Break Point ===== //
 @mixin media($media-width) {
+	@if $media-width == xs {
+		@media only screen and (max-width: $bp-sp - 1px) {
+			@content;
+		}
+	}
 	@if $media-width == sp {
 		@media only screen and (max-width: $bp-tb - 1px) {
 			@content;
@@ -12,6 +17,11 @@
 	}
 	@if $media-width == pc {
 		@media print, screen and (min-width: $bp-tb) {
+			@content;
+		}
+	}
+	@if $media-width == lpc {
+		@media print, screen and (min-width: $bp-lpc) {
 			@content;
 		}
 	}

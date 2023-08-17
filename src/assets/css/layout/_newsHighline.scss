@@ -1,4 +1,7 @@
 .NewsHighline {
+  @include media(sp) {
+   margin-bottom: px-rem(20);
+  }
   h2 {
     background: $color-main;
     color: #fff;
@@ -7,6 +10,9 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 0;
+    @include media(sp) {
+      margin-top: px-rem(50px);
+    }
     span{
       padding-bottom: 0;
     }

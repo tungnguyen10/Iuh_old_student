@@ -3,7 +3,6 @@ import $ from "jquery";
 
 export default class Header extends BaseModule {
   register() {
-
     $(window).on('load resize ', function () {
       $("body").css("padding-top", $('.l-header').height());
     });
@@ -68,7 +67,7 @@ export default class Header extends BaseModule {
 
     var minWidth = $(window).innerWidth();
     if (minWidth < 767) {
-      $(".js-anker").click(function () {
+      $(".js-anker").on('click',function () {
         $menuTrriger.removeClass('is-open');
         $menuTarget.removeClass('is-open');
         $menuBg.removeClass('is-open');

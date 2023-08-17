@@ -33,11 +33,10 @@
         &:last-child {
           padding-bottom: 0;
         }
-        ul{
+        ul {
           display: none;
         }
       }
-      
 
       .f-title {
         font-size: px-rem(18);
@@ -46,7 +45,7 @@
         text-transform: uppercase;
         margin-bottom: px-rem(10);
         position: relative;
-        i{
+        i {
           opacity: 0;
           @include transition;
           position: absolute;
@@ -54,19 +53,18 @@
           top: 50%;
           transform: translateY(-50%);
         }
-        &.is-active{
-          i{
+        &.is-active {
+          i {
             transform: translateY(-50%) rotate(180deg);
           }
         }
         @include media(sp) {
           font-size: px-rem(18);
           margin-bottom: px-rem(5);
-          i{
+          i {
             opacity: 1;
           }
         }
-        
       }
 
       .f-contact {
@@ -129,7 +127,7 @@
     &--cont {
       .f-logo {
         padding-bottom: px-rem(15);
-        @include media(sp){
+        @include media(sp) {
           text-align: center;
         }
       }
@@ -151,7 +149,6 @@
           @include media(sp) {
             margin-right: px-rem(15);
           }
-
         }
       }
     }
@@ -193,7 +190,7 @@
   }
 
   li {
-    &:not(:first-child){
+    &:not(:first-child) {
       margin-left: px-rem(15);
     }
 
@@ -217,7 +214,14 @@
 
     .i-ins {
       i {
-        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -235,23 +239,40 @@
 .backtop {
   cursor: pointer;
   position: fixed;
-  bottom: px-rem(60);
-  right: px-rem(20);
+  bottom: px-rem(30);
+  right: 2%;
   z-index: 99;
   top: auto !important;
   width: px-rem(40);
   height: px-rem(40);
-  line-height: px-rem(44);
   font-weight: bold;
   text-align: center;
-  display: inline-block;
+  display: flex;
   color: #fff;
   border-radius: px-rem(30);
   background: $color-main;
   text-decoration: none;
-  i{
+  align-items: center;
+  justify-content: center;
+  i {
     font-size: px-rem(20);
     color: #fff;
     font-weight: bold;
+  }
+  @include media(sp) {
+    width: px-rem(20);
+    height: px-rem(20);
+    i {
+      font-size: px-rem(10);
+      margin-left: 5%;
+    }
+  }
+  @include media(xs) {
+    width: px-rem(30);
+    height: px-rem(30);
+    i {
+      font-size: px-rem(16);
+      margin-left: 5%;
+    }
   }
 }

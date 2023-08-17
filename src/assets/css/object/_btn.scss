@@ -121,6 +121,11 @@
   text-align: center;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  @include media(sp){
+    padding: px-rem(5px) px-rem(20px);
+    font-size: px-rem(18px);
+    width: 100%;
+  }
   &:hover{
     background: radial-gradient(circle, #333395, #891593, #c80078, #f1004c, #ff0000) !important;
   }
@@ -138,6 +143,13 @@
   transition: all 0.5s ease-in-out;
   i{
     font-size: px-rem(22px);
+  }
+  @include media(sp){
+    width: px-rem(40px);
+    height: px-rem(40px);
+    i{
+      font-size: px-rem(18px);
+    }
   }
   
 }

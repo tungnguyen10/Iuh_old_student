@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 px-rem(-21);
+    list-style: none;
 
     @include media(sp) {
       margin: 0 -2%;
@@ -59,14 +60,15 @@
       display: none;
     }
 
-    @media screen and (max-width: 480px) {
+    @include media(sp)  {
       display: block;
     }
 
     .arrow-icon {
       i {
         color: #000;
-        font-size: px-rem(25);
+        font-size: px-rem(28);
+        @include media(sp) 
       }
     }
 
