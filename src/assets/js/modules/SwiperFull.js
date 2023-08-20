@@ -6,6 +6,7 @@ import Swiper, {
   Autoplay,
   EffectCreative,
   EffectFade,
+  Thumbs,
 } from "swiper";
 // import Swiper and modules styles
 import "swiper/css";
@@ -14,18 +15,47 @@ import "swiper/css/pagination";
 
 export default class SwiperFull extends BaseModule {
   register() {
-    Swiper.use([Navigation, Pagination, Autoplay, EffectCreative, EffectFade]);
-    this.swiper = new Swiper(".swiper_slidefull", {
+    Swiper.use([
+      Navigation,
+      Pagination,
+      Autoplay,
+      EffectCreative,
+      EffectFade,
+      Thumbs,
+    ]);
+    this.slidefull = new Swiper(".swiper_slidefull", {
       direction: "horizontal",
       slidesPerView: 1,
       loop: true,
-      // effect: "fade",
-      // fadeEffect: {
-      //   crossFade: true
-      // }, 
       effect: "creative",
       creativeEffect: {
-        limitProgress: 2, 
+        limitProgress: 2,
+        prev: {
+          opacity: 0.85,
+          scale: 0.8,
+          translate: ["-95%", 0, 0],
+        },
+        next: {
+          opacity: 0.85,
+          scale: 0.8,
+          translate: ["95%", 0, 0],
+        },
+      },
+      speed: 1000,
+      autoplay: {
+        delay: 3000,
+      },
+      thumbs: {
+        swiper: this.swiperThumbs,
+      },
+    });
+    this.swiperThumbs = new Swiper(".swiper_slidefullThums", {
+      direction: "horizontal",
+      slidesPerView: 1,
+      loop: true,
+      effect: "creative",
+      creativeEffect: {
+        limitProgress: 2,
         prev: {
           opacity: 0.85,
           scale: 0.8,
@@ -43,15 +73,19 @@ export default class SwiperFull extends BaseModule {
       },
 
       pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        // clickable: true,
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
       },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      thumbs: {
+        swiper: this.slidefull,
+      },
     });
+
     // this.swiper = new Swiper(".swiperSlidefullO1", {
     //   slidesPerView: 1,
     //   parallax: true,
@@ -74,7 +108,7 @@ export default class SwiperFull extends BaseModule {
     //   grabCursor: true,
     //   effect: "creative",
     //   creativeEffect: {
-    //     limitProgress: 2, 
+    //     limitProgress: 2,
     //     prev: {
     //       opacity: 0.85,
     //       scale: 0.8,
@@ -124,7 +158,7 @@ export default class SwiperFull extends BaseModule {
     //   grabCursor: true,
     //   effect: "creative",
     //   creativeEffect: {
-    //     limitProgress: 2, 
+    //     limitProgress: 2,
     //     prev: {
     //       opacity: 0.85,
     //       scale: 0.8,
@@ -174,7 +208,7 @@ export default class SwiperFull extends BaseModule {
     //   grabCursor: true,
     //   effect: "creative",
     //   creativeEffect: {
-    //     limitProgress: 2, 
+    //     limitProgress: 2,
     //     prev: {
     //       opacity: 0.85,
     //       scale: 0.8,

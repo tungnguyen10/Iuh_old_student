@@ -1,7 +1,4 @@
-.swiper_slidefull,
-.swiperSlidefullO1,
-.swiperSlidefullO3,
-.swiperSlidefullO2 {
+.swiper_slidefull{
   height: 50vw;
 
   @include media(pc) {
@@ -13,23 +10,11 @@
       width: 100%;
       min-height: 100%;
       object-fit: cover;
+      
     }
   }
 }
-.swiperSlidefullO1,
-.swiperSlidefullO3,
-.swiperSlidefullO2 {
-  padding: 3% 8% !important;
-  @include media(sp) {
-    padding: 6% 6% !important;
-  }
-  background: url("../images/financial/bg.png") no-repeat center center/cover;
-  .swiper-slide {
-    border-radius: 20px;
-    box-shadow: 0 0 60px 0px #0e1012d9;
-    overflow: hidden;
-  }
-}
+
 .l-mv {
   .swiper-pagination {
     @include media(sp) {
@@ -160,7 +145,7 @@
 }
 .financial-mv .l-inner {
   position: absolute;
-  z-index: 6;
+  z-index: 99;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -228,6 +213,12 @@
     width: 50%;
     z-index: 1;
     clip-path: polygon(0 0, 75% 0, 82% 65%, 100% 100%, 0 100%, 0 72%);
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   .right {
     position: absolute;
@@ -236,6 +227,12 @@
     bottom: 0;
     width: 65%;
     z-index: 0;
+    img{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -283,4 +280,12 @@
     left: 2%;
     transform: translateY(-50%);
   }
+}
+
+.swiper_slidefullThums{
+  position: absolute !important;
+  z-index: 3 !important;
+  top: 0;
+  left: 0;
+  right: 0;bottom: 0;
 }

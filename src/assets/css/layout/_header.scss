@@ -76,11 +76,10 @@
             background: #f4f4f4;
             position: absolute;
             top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
             width: 100%;
             box-shadow: 6px 7px 20px #c3c3c3;
             z-index: -1;
+            min-width: 230px;
             @include media(sp) {
               display: none;
               opacity: 1;
@@ -95,6 +94,9 @@
               height: 4rem;
               justify-content: flex-start;
               text-align: left;
+              @include media(sp) {
+                height: auto;
+              }
             }
           }
           &:hover{

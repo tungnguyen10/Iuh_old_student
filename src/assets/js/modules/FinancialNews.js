@@ -6,7 +6,7 @@ export default class FinancialNews extends BaseModule {
   register() {
     $('.js-sliderFinancialNews').slick({
       infinite: true,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 4000,
       centerMode: false,
       variableWidth: true,
