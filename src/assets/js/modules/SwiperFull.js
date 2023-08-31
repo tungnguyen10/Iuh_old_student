@@ -26,7 +26,7 @@ export default class SwiperFull extends BaseModule {
     this.slidefull = new Swiper(".swiper_slidefull", {
       direction: "horizontal",
       slidesPerView: 1,
-      loop: true,
+      loop: false,
       effect: "creative",
       creativeEffect: {
         limitProgress: 2,
@@ -46,32 +46,13 @@ export default class SwiperFull extends BaseModule {
         delay: 3000,
       },
       thumbs: {
-        swiper: this.swiperThumbs,
+        swiper: {
+          el: '.swiper_slidefullThums',
+          slidesPerView: 1,
+          spaceBetween: 0,
+          direction: "horizontal",
+        }
       },
-    });
-    this.swiperThumbs = new Swiper(".swiper_slidefullThums", {
-      direction: "horizontal",
-      slidesPerView: 1,
-      loop: true,
-      effect: "creative",
-      creativeEffect: {
-        limitProgress: 2,
-        prev: {
-          opacity: 0.85,
-          scale: 0.8,
-          translate: ["-95%", 0, 0],
-        },
-        next: {
-          opacity: 0.85,
-          scale: 0.8,
-          translate: ["95%", 0, 0],
-        },
-      },
-      speed: 1000,
-      autoplay: {
-        delay: 3000,
-      },
-
       pagination: {
         el: ".swiper-pagination",
         type: "bullets",
@@ -81,10 +62,43 @@ export default class SwiperFull extends BaseModule {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      thumbs: {
-        swiper: this.slidefull,
-      },
     });
+    // this.swiperThumbs = new Swiper(".swiper_slidefullThums", {
+    //   direction: "horizontal",
+    //   slidesPerView: 1,
+    //   loop: true,
+    //   effect: "creative",
+    //   creativeEffect: {
+    //     limitProgress: 2,
+    //     prev: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["-95%", 0, 0],
+    //     },
+    //     next: {
+    //       opacity: 0.85,
+    //       scale: 0.8,
+    //       translate: ["95%", 0, 0],
+    //     },
+    //   },
+    //   speed: 1000,
+    //   autoplay: {
+    //     delay: 3000,
+    //   },
+
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     type: "bullets",
+    //     clickable: true,
+    //   },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    //   thumbs: {
+    //     swiper: this.slidefull,
+    //   },
+    // });
 
     // this.swiper = new Swiper(".swiperSlidefullO1", {
     //   slidesPerView: 1,
